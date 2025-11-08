@@ -26,9 +26,14 @@ This project demonstrates basic socket programming, authentication, and file tra
 ## 📦 Project Structure
 03:file sharing project-
 SWAYAMSHREE SINGH_2241019524_BATCH 02
+
+
+
 server .cpp
 #include <iostream>
+
 #include <fstream>
+
 #include <string>
 #include <cstring>
 #include <sys/socket.h>
@@ -83,6 +88,8 @@ if (bytesRead < BUFFER_SIZE) break; // end
 file.close();
 std::cout << "􈆆􎀱 File received and saved to " << filePath << "\n";
 }
+
+
 int main() {
 int serverSocket, clientSocket;
 sockaddr_in address;
@@ -115,6 +122,9 @@ close(clientSocket);
 close(serverSocket);
 return 0;
 }
+
+
+
 client.cpp
 #include <iostream>
 #include <fstream>
@@ -150,6 +160,8 @@ if (bytesRead < BUFFER_SIZE) break;
 file.close();
 std::cout << "􈆆􎀱 File downloaded successfully.\n";
 }
+
+
 int main() {
 int sock = socket(AF_INET, SOCK_STREAM, 0);
 sockaddr_in serv_addr;
